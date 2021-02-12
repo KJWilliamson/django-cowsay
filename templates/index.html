@@ -1,0 +1,19 @@
+<!--got help from Juddie-->
+<a href="/history/"><button>Most Recent</button></a>
+<h1>COWSAYS</h1>
+<h1>WHAT</h1>
+    <br>
+    <br>
+    {% if name %}
+    <pre>
+        {{ name}}
+    </pre>
+    <br>
+    <br>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        Cow says: <input type="text" name="cowsay_string" id="cowsay_string" />
+        <input type="submit" value="Moo" />
+    </form>
+
